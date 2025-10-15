@@ -1,9 +1,0 @@
-diff a/package.json b/package.json	(rejected hunks)
-@@ -39,6 +39,7 @@
-     "package:windows": "electron-forge make --skip-package --platform=win32",
-     "package:windows:exe": "electron-forge make --skip-package --platform=win32 --targets=squirrel",
-     "package:windows:msi": "electron-forge make --skip-package --platform=win32 --targets=wix",
-+    "release:simple": "npx -y zx ./scripts/release-simple.mjs",
-     "release:package": "npx -y zx ./scripts/prepare-release-packages.mjs",
-     "generate-icons": "node ./scripts/generate-icons.js",
-     "download-vue-devtools": "node ./scripts/download-vue-devtools.mjs",
