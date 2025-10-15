@@ -1,0 +1,21 @@
+name: ChatGPT Codex Task
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Task for ChatGPT Codex'
+        required: true
+        default: 'Анализировать ветку OriginalCode/2.0.1-beta'
+
+jobs:
+  run-codex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run ChatGPT Codex
+        uses: openai/chatgpt-codex-action@v1
+        with:
+          prompt: ${{ github.event.inputs.prompt }}
