@@ -1,0 +1,65 @@
+/**
+ * SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+@mixin markdown {
+	// Overwrite core styles, otherwise h4 is lesser than default font-size
+	h4 {
+		font-size: 100%;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	ul,
+	ol {
+		/* stylelint-disable-next-line csstools/use-logical */
+		padding-left: 0;
+		padding-inline-start: 15px;
+
+		&.contains-task-list {
+			padding: 0;
+		}
+	}
+
+	input:disabled + .checkbox-content {
+		opacity: 1 !important;
+	}
+
+	div:has(table) {
+		overflow-x: auto;
+	}
+
+	pre {
+		width: calc(100% - var(--default-clickable-area));
+		padding: 4px;
+		margin: 2px 0;
+		border-radius: var(--border-radius);
+		background-color: var(--color-background-dark);
+		overflow-x: auto;
+
+		& code {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	code {
+		display: inline-block;
+		padding: 2px 4px;
+		margin: 2px 0;
+		border-radius: var(--border-radius);
+		background-color: var(--color-background-dark);
+	}
+
+	blockquote {
+		/* stylelint-disable-next-line csstools/use-logical */
+		padding-left: 0;
+		padding-inline-start: 13px;
+		/* stylelint-disable-next-line csstools/use-logical */
+		border-left: none;
+		border-inline-start: 4px solid var(--color-border);
+	}
+}
