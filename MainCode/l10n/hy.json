@@ -1,0 +1,20 @@
+{ "translations": {
+    "Server address" : "սերվերի հասցեն",
+    "Log in" : "Մուտք գործել",
+    "Close" : "Փակել",
+    "Security warning" : "Անվտանգության զգուշացում",
+    "Cancel" : "չեղարկել",
+    "Copy" : "Պատճենել",
+    "About" : "Մասին",
+    "License" : "լիցենզիա",
+    "Issues" : "հայց",
+    "Ok" : "Լավ",
+    "No" : "Ոչ",
+    "Yes" : "Այո",
+    "Never" : "Երբեք",
+    "General" : "Ընդհանուր",
+    "Settings" : "Կարգավորումներ",
+    "Today" : "Այսօր",
+    "This week" : "այս շաբաթ"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
