@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: CC0-1.0
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{package.json,package-lock.json}]
+indent_size = 2
+indent_style = space
+
+[{*.css, *.scss}]
+tab_width = 2
+
+[{*.js,*.cjs,*.mjs,*.ts,*.vue}]
+tab_width = 2
+
+[*.json]
+tab_width = 2
+
+[*.html]
+tab_width = 2
+
+[{*.markdown,*.md}]
+tab_width = 2
+trim_trailing_whitespace = false
+
+[{*.yml,*.yaml}]
+tab_width = 2
+indent_size = 2
+indent_style = space

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="6.12.1@e71404b0465be25cf7f8a631b298c01c5ddd864f">
+  <file src="lib/AppInfo/Application.php">
+    <UndefinedClass>
+      <code><![CDATA[BeforeTemplateRenderedEvent]]></code>
+      <code><![CDATA[BeforeTemplateRenderedEvent]]></code>
+      <code><![CDATA[CircleEditedEvent]]></code>
+      <code><![CDATA[EditingCircleEvent]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Chat/CommentsManager.php">
+    <UndefinedMethod>
+      <code><![CDATA[getLastKnownComment]]></code>
+    </UndefinedMethod>
+  </file>
+  <file src="lib/Chat/Parser/SystemMessage.php">
+    <UndefinedClass>
+      <code><![CDATA[\OC_Util]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Command/PhoneNumber/AddPhoneNumber.php">
+    <UndefinedConstant>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::SUCCESS]]></code>
+      <code><![CDATA[self::SUCCESS]]></code>
+    </UndefinedConstant>
+  </file>
+  <file src="lib/Command/PhoneNumber/FindPhoneNumber.php">
+    <UndefinedConstant>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::SUCCESS]]></code>
+      <code><![CDATA[self::SUCCESS]]></code>
+    </UndefinedConstant>
+  </file>
+  <file src="lib/Command/PhoneNumber/ImportPhoneNumbers.php">
+    <UndefinedConstant>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::FAILURE]]></code>
+      <code><![CDATA[self::SUCCESS]]></code>
+    </UndefinedConstant>
+  </file>
+  <file src="lib/Command/PhoneNumber/RemovePhoneNumber.php">
+    <UndefinedConstant>
+      <code><![CDATA[self::SUCCESS]]></code>
+    </UndefinedConstant>
+  </file>
+  <file src="lib/Command/PhoneNumber/RemoveUser.php">
+    <UndefinedConstant>
+      <code><![CDATA[self::SUCCESS]]></code>
+    </UndefinedConstant>
+  </file>
+  <file src="lib/Config.php">
+    <NullArgument>
+      <code><![CDATA[null]]></code>
+    </NullArgument>
+  </file>
+  <file src="lib/Controller/TempAvatarController.php">
+    <UndefinedClass>
+      <code><![CDATA[Filesystem]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Federation/Authenticator.php">
+    <NoInterfaceProperties>
+      <code><![CDATA[$this->request->server]]></code>
+    </NoInterfaceProperties>
+  </file>
+  <file src="lib/Files/Util.php">
+    <InvalidArgument>
+      <code><![CDATA[$fileId]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="lib/Listener/CalDavEventListener.php">
+    <UndefinedClass>
+      <code><![CDATA[Reader]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Listener/CircleEditedListener.php">
+    <UndefinedClass>
+      <code><![CDATA[EditingCircleEvent]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/MatterbridgeManager.php">
+    <UndefinedClass>
+      <code><![CDATA[$this->tokenProvider]]></code>
+      <code><![CDATA[$this->tokenProvider]]></code>
+      <code><![CDATA[$this->tokenProvider]]></code>
+      <code><![CDATA[private]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Migration/Version2001Date20170707115443.php">
+    <InvalidArrayAccess>
+      <code><![CDATA[$return['num_rooms']]]></code>
+    </InvalidArrayAccess>
+  </file>
+  <file src="lib/Model/Poll.php">
+    <LessSpecificReturnStatement>
+      <code><![CDATA[[
+			'id' => $this->getId(),
+			// The room id is not needed on the API level but only internally for optimising database queries
+			// 'roomId' => $this->getRoomId(),
+			'question' => $this->getQuestion(),
+			'options' => json_decode($this->getOptions(), true, 512, JSON_THROW_ON_ERROR),
+			'actorType' => $this->getActorType(),
+			'actorId' => $this->getActorId(),
+			'actorDisplayName' => $this->getDisplayName(),
+			'status' => $this->getStatus(),
+			'resultMode' => $this->getResultMode(),
+			'maxVotes' => $this->getMaxVotes(),
+		]]]></code>
+    </LessSpecificReturnStatement>
+    <MoreSpecificReturnType>
+      <code><![CDATA[TalkPollDraft]]></code>
+    </MoreSpecificReturnType>
+  </file>
+  <file src="lib/Notification/Notifier.php">
+    <InvalidPropertyAssignmentValue>
+      <code><![CDATA[$this->participants]]></code>
+      <code><![CDATA[$this->rooms]]></code>
+      <code><![CDATA[$this->rooms]]></code>
+    </InvalidPropertyAssignmentValue>
+  </file>
+  <file src="lib/PublicShare/TemplateLoader.php">
+    <UndefinedClass>
+      <code><![CDATA[BeforeTemplateRenderedEvent]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/PublicShareAuth/TemplateLoader.php">
+    <UndefinedClass>
+      <code><![CDATA[BeforeTemplateRenderedEvent]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Service/AvatarService.php">
+    <MissingDependency>
+      <code><![CDATA[\OCP\Image]]></code>
+    </MissingDependency>
+    <UndefinedClass>
+      <code><![CDATA[Filesystem]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Service/RecordingService.php">
+    <LessSpecificReturnStatement>
+      <code><![CDATA[$recordingFolder]]></code>
+    </LessSpecificReturnStatement>
+    <MoreSpecificReturnType>
+      <code><![CDATA[Folder]]></code>
+    </MoreSpecificReturnType>
+    <UndefinedClass>
+      <code><![CDATA[NoUserException]]></code>
+      <code><![CDATA[NoUserException]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Share/Listener.php">
+    <UndefinedClass>
+      <code><![CDATA[$event->getView()]]></code>
+      <code><![CDATA[$event->getView()]]></code>
+      <code><![CDATA[$event->getView()]]></code>
+      <code><![CDATA[$view]]></code>
+      <code><![CDATA[$view]]></code>
+      <code><![CDATA[$view]]></code>
+      <code><![CDATA[Filesystem]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/Share/RoomShareProvider.php">
+    <UndefinedClass>
+      <code><![CDATA[Cache]]></code>
+    </UndefinedClass>
+  </file>
+  <file src="lib/TInitialState.php">
+    <UndefinedClass>
+      <code><![CDATA[NoUserException]]></code>
+    </UndefinedClass>
+  </file>
+</files>

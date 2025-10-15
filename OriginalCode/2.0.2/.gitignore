@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: CC0-1.0
+
+# Env
+.env
+
+# Nextcloud Talk source code
+spreed/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+.DS_Store
+
+# Dependency directories
+node_modules/
+
+# Webpack
+.webpack/
+
+# Electron-Forge
+out/
+
+# IDE
+.vscode/
+.idea/
+
+# AI
+.aider.conf.yml
+.claude/
+.cursor/
+.cursorrules
+.copilot/
+.gemini/
+opencode.json
