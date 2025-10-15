@@ -1,21 +1,44 @@
 name: ChatGPT Codex Task
-
 on:
   workflow_dispatch:
     inputs:
       prompt:
-        description: 'Task for ChatGPT Codex'
+        description: "Введите запрос для ChatGPT Codex"
         required: true
-        default: 'Анализировать ветку OriginalCode/2.0.1-beta'
+        default: "Анализировать ветку OriginalCode/2.0.1-beta"
 
 jobs:
   run-codex:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run ChatGPT Codex
-        uses: openai/chatgpt-codex-action@v1
+      - name: Send task to ChatGPT Codex API
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "🔍 Отправка запроса в ChatGPT Codex..."
+          curl https://api.openai.com/v1/chat/completions \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $OPENAI_API_KEY" \
+            -d "{
+              \"model\": \"gpt-4o-mini\",
+              \"messages\": [
+                {\"role\": \"system\", \"content\": \"Ты — GitHub Codex-аналитик. Анализируй код и возвращай структурированные результаты.\"},
+                {\"role\": \"user\", \"content\": \"${{ github.event.inputs.prompt }}\"}
+              ]
+            }" > codex_output.json
+
+      - name: Save result
+        run: |
+          mkdir -p reports
+          jq -r '.choices[0].message.content' codex_output.json > reports/analysis_codex_result.md
+          echo "✅ Результат сохранён в reports/analysis_codex_result.md"
+
+      - name: Upload result as artifact
+        uses: actions/upload-artifact@v4
         with:
-          prompt: ${{ github.event.inputs.prompt }}
+          name: ChatGPT-Codex-Result
+          path: reports/analysis_codex_result.md
